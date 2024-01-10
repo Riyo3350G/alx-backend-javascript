@@ -6,3 +6,7 @@ export interface Teacher {
     yearsOfExperience?: number;
     [key: string]: any;
 }
+
+export interface Directors extends Teacher {
+    numberOfReports: number;
+}
