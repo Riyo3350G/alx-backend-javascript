@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs').promises;
+const port = 1245;
 
 async function countStudents(path) {
   return new Promise((resolve, reject) => {
@@ -44,5 +45,5 @@ const app = http.createServer((req, res) => {
   }
 });
 
-app.listen(1245, () => {});
+app.listen(port, () => {});
 module.exports = app;
