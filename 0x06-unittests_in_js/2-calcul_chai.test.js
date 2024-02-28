@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber', () => {
   // eslint-disable-next-line jest/prefer-expect-assertions, jest/expect-expect
