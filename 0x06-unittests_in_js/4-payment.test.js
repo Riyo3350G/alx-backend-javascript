@@ -1,10 +1,10 @@
-const { expect } = require('chai');
+const mocha = require('mocha');
+const { expect, assert } = require('chai');
 const sinon = require('sinon');
 
-// eslint-disable-next-line no-unused-vars
-const { spy } = require('sinon');
-const Utils = require('./utils');
+const utils = require('./utils');
 const sendPaymentRequestToApi = require('./4-payment');
+const { spy } = require('sinon');
 
 describe('sendPaymentRequestToApi', () => {
   // eslint-disable-next-line jest/prefer-expect-assertions
