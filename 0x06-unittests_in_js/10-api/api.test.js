@@ -46,12 +46,12 @@ describe('aPI integration test', () => {
   it('pOST /login returns correct response', () => new Promise((done) => {
     request.post({
       url: `${URL}/login`,
-      form: { userName: 'Redwan' },
+      json: { userName: 'Betty' },
     }, (_err, res, body) => {
       // eslint-disable-next-line jest/valid-expect
       expect(res.statusCode).to.be.equal(200);
       // eslint-disable-next-line jest/valid-expect
-      expect(body).to.be.equal('Welcome Redwan');
+      expect(body).to.be.equal('Welcome Betty');
       done();
     });
   }));
