@@ -23,4 +23,13 @@ describe('aPI integration test', () => {
       done();
     });
   }));
+
+  it('correct status code when :id is NOT a number (=> 404)?', () => new Promise((done) => {
+    // eslint-disable-next-line no-unused-vars
+    request.get(`${URL}/cart/twelve`, (_err, res, _body) => {
+      // eslint-disable-next-line jest/valid-expect
+      expect(res.statusCode).to.be.equal(404);
+      done();
+    });
+  }));
 });
