@@ -33,6 +33,16 @@ describe('aPI integration test', () => {
     });
   }));
 
+  it('gET /available_payments returns correct response', () => new Promise((done) => {
+    request.get(`${URL}/available_payments`, (_err, res, body) => {
+      // eslint-disable-next-line jest/valid-expect
+      expect(res.statusCode).to.be.equal(200);
+      // eslint-disable-next-line jest/valid-expect
+      expect(body).to.be.equal('{"payment_methods":{"credit_cards":true,"paypal":false}}');
+      done();
+    });
+  }));
+
   it('pOST /login returns correct response', () => new Promise((done) => {
     request.post({
       url: `${URL}/login`,
